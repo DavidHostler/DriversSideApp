@@ -1,10 +1,10 @@
+
 import React, { useEffect, useRef } from 'react';
-import { useSelector } from 'react-redux';
 import { NavigationActions } from 'react-navigation';
+import { useSelector } from 'react-redux';
+import Navigator from './Navigator';
 
-import ShopNavigator from './ShopNavigator';
-
-const NavigationContainer = props => {
+export default const NavigationContainer = props => {
   const navRef = useRef();
   const isAuth = useSelector(state => !!state.auth.token);
 
@@ -16,7 +16,5 @@ const NavigationContainer = props => {
     }
   }, [isAuth]);
 
-  return <ShopNavigator ref={navRef} />;
+  return <Navigator ref={navRef} />;
 };
-
-export default NavigationContainer;
