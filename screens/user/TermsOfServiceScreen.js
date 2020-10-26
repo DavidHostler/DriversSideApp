@@ -23,7 +23,12 @@ const TermsOfServiceScreen = props => {
            and vehicle no more than 10 years old and in working condition as specified by the
            laws of my province/state and municipality. I hereby agree that as a contractor, 
            I can be terminated if deemed necessary by the company and that I cannot claim 
-           wrongful dismissal if this situation unfortunately arises.
+           wrongful dismissal if this situation unfortunately arises due to my behaviour or failure
+           to provide quality service to customers during these trying times.
+           
+           I have also indicated that I have a valid driver's licence in my province/state and access to a vehicle with up 
+           to date registration and adequate tires for the season. I am liable for any road related incidents that are 
+           determined to be my fault.
           </Text>
           
         </View>
