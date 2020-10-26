@@ -5,17 +5,19 @@ import { AppLoading } from 'expo';
 import * as Font from 'expo-font';
 import ReduxThunk from 'redux-thunk';
 
-import productsReducer from './store/reducers/products';
-import cartReducer from './store/reducers/cart';
-import ordersReducer from './store/reducers/orders';
-import authReducer from './store/reducers/auth';
+
+
+import orders from './store/reducers/orders';
+import products from './store/reducers/products';
+import cart from './store/reducers/cart';
+import auth from './store/reducers/auth';
 import NavigationContainer from './navigation/NavigationContainer';
 
 const rootReducer = combineReducers({
-  products: productsReducer,
-  cart: cartReducer,
-  orders: ordersReducer,
-  auth: authReducer
+  products: products,
+  cart: cart,
+  orders: orders,
+  auth: auth
 });
 
 const store = createStore(rootReducer, applyMiddleware(ReduxThunk));
