@@ -17,7 +17,7 @@ import * as cartActions from '../../store/actions/cart';
 import * as productsActions from '../../store/actions/products';
 import Colors from '../../constants/Colors';
 
-const ProductsOverviewScreen = props => {
+const OrderViewScreen = props => {
   const [isLoading, setIsLoading] = useState(false);
   const [isRefreshing, setIsRefreshing] = useState(false);
   const [error, setError] = useState();
@@ -118,7 +118,7 @@ const ProductsOverviewScreen = props => {
   );
 };
 
-ProductsOverviewScreen.navigationOptions = navData => {
+OrderViewScreen.navigationOptions = navData => {
   return {
     headerTitle: 'All Products',
     headerLeft: (
@@ -132,22 +132,7 @@ ProductsOverviewScreen.navigationOptions = navData => {
         />
       </HeaderButtons>
     )
-    //TOP RIGHT CORNER HEADER SYMBOL
-    /*
-    ,
-    headerRight: (
-      <HeaderButtons HeaderButtonComponent={HeaderButton}>
-        <Item
-          title="Cart"
-          iconName={Platform.OS === 'android' ? 'md-cart' : 'ios-cart'}
-          onPress={() => {
-            navData.navigation.navigate('Cart');
-          }}
-        />
-      </HeaderButtons>
-      
-    )
-    */
+    
   };
 };
 
@@ -155,4 +140,4 @@ const styles = StyleSheet.create({
   centered: { flex: 1, justifyContent: 'center', alignItems: 'center' }
 });
 
-export default ProductsOverviewScreen;
+export default OrderViewScreen;
