@@ -12,7 +12,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import Colors from '../../constants/Colors';
 import * as cartActions from '../../store/actions/cart';
 
-const OrderScreen = props => {
+const OrderDetailScreen = props => {
   const productId = props.navigation.getParam('productId');
   const selectedProduct = useSelector(state =>
     state.products.availableProducts.find(prod => prod.id === productId)
@@ -37,7 +37,7 @@ const OrderScreen = props => {
   );
 };
 
-OrderScreen.navigationOptions = navData => {
+OrderDetailScreen.navigationOptions = navData => {
   return {
     headerTitle: navData.navigation.getParam('productTitle')
   };
@@ -67,4 +67,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default OrderScreen;
+export default OrderDetailScreen;
